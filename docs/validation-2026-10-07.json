@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-07",
+  "version": "0.2.0",
+  "platform": "macOS",
+  "kritaVersion": "5.3.4 (git e7e52a7)",
+  "nodeTestsPassed": 11,
+  "pythonTestsPassed": 27,
+  "nativeTests": [
+    {
+      "test": "real-krita-smoke.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "checks": {
+        "hiddenPreviewEqualsSource": true,
+        "reorderReadbackAndRestoration": true,
+        "maskedCorrection": {
+          "changedInside": 87360,
+          "changedOutside": 0,
+          "maxChannelDifference": 33,
+          "comparedPixels": 1920000
+        },
+        "kraRoundtripRGBAEqualsExport": true,
+        "roundtripFileSHAEqualsExport": true,
+        "sourceFileUnchanged": true,
+        "preexistingBridgeDocumentsUnchanged": true
+      }
+    },
+    {
+      "test": "real-roi-smoke.mjs",
+      "exitCode": 0,
+      "status": "passed",
+      "checks": {
+        "sourceAndProjectionROIExact": true,
+        "explicitUniformResize": {
+          "input": [
+            120,
+            100
+          ],
+          "output": [
+            240,
+            200
+          ],
+          "aspectPreserved": true,
+          "inputUnchanged": true,
+          "nonuniformRejected": true
+        },
+        "invalidBoundsNoMutation": true,
+        "importRoundtripExact": true,
+        "maskedPatch": {
+          "comparedPixels": 1920000,
+          "changedInside": 4800,
+          "changedOutside": 0,
+          "perRegion": [
+            4800
+          ]
+        },
+        "patchHideRollbackExact": true,
+        "maskedClone": {
+          "comparedPixels": 1920000,
+          "changedInside": 4800,
+          "changedOutside": 0,
+          "perRegion": [
+            4800
+          ]
+        },
+        "cloneSourceAndHideRollbackExact": true,
+        "combinedLocalEdits": {
+          "comparedPixels": 1920000,
+          "changedInside": 9600,
+          "changedOutside": 0,
+          "perRegion": [
+            4800,
+            4800
+          ]
+        },
+        "reopenedKraExact": true,
+        "sourceFileUnchanged": true,
+        "preexistingBridgeDocumentsUnchanged": true
+      }
+    }
+  ],
+  "originalSettingsHashesUnchanged": true,
+  "publishedCoreSHA256": {
+    "server/index.mjs": "48fef927f3ae48cc99432e16b68b8a1128522769c712000a81e140efa2aa7705",
+    "server/bridge.mjs": "01c34682a1f96f08f186e424ca8a67f99800822f975c280b1a1f21a56c6df406",
+    "server/operations.mjs": "b908e9d6069a46f8d447bd0389362f2eff3f2717828000d78a226f9a03392698",
+    "krita_plugin/krita_mcp_bridge/bridge.py": "11ce48db0ca331e0ceac21196a9b5a29ea050bf7b8cdb216bdd34e2d0e172246",
+    "krita_plugin/krita_mcp_bridge/validation.py": "e560b5dd8efa9872f04e209dc2c62a01311c7f396ebff1eb45a4a406ae748fa7"
+  }
+}

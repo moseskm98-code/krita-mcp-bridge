@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=krita_mcp_bridge
+X-Python-2-Compatible=false
+Name=Krita Local MCP Bridge
+Comment=Authenticated local named operations for image layers, masks and export

@@ -1,0 +1,16 @@
+node_modules/
+output/
+outputs/
+backups/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+connection.json
+*.kra
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.log
